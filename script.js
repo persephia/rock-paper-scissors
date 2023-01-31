@@ -1,7 +1,6 @@
 // Definitions
 let userScore = 0;
 let computerScore = 0;
-let roundWinner = "";
 
 const computerChoice = getRandomChoice();
 
@@ -17,7 +16,7 @@ function getRandomChoice() {
             return 'grass'
     }
 }
-//Testing ...
-// console.log(getRandomChoice());
+//    //Testing ...
+//    // console.log(getRandomChoice());
 
 // User Makes Choice
