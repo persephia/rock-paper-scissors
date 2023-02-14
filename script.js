@@ -35,7 +35,7 @@ function getRandomChoice() {
 // Play the Game
 var fireBtn = document.getElementById('fireBtn');
 if (fireBtn) {
-    fireBtn.addEventListener('click', () => getUserChoice());
+    fireBtn.addEventListener('click', () => getUserChoice('fire'));
 }
 
 var waterBtn = document.getElementById('waterBtn');
@@ -51,10 +51,10 @@ if (grassBtn) {
 
 
 
-function getUserChoice() {
-   // const computerChoice = getRandomChoice();
-   // playGame(userChoice, computerChoice);
-   console.log("click");
+function getUserChoice(userChoice) {
+    const computerChoice = getRandomChoice();
+    playGame(userChoice, computerChoice);
+   // console.log("click");
 }
 
 function playGame(userChoice, computerChoice) {
@@ -65,7 +65,7 @@ function playGame(userChoice, computerChoice) {
         result = ("Aha! " + userChoice + " defeats " + computerChoice + ".  Well done!")
     } else {
         computerScore += 1;
-        result = ("Alas, " + computerChoice + "defeats " + userChoice + ".  Better luck next time...")
+        result = ("Alas, " + computerChoice + " defeats " + userChoice + ".  Better luck next time...")
     }
     document.getElementById('result').innerHTML = result;
 }
