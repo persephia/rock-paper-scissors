@@ -49,12 +49,11 @@ if (grassBtn) {
 }
 
 
-
-
 function getUserChoice(userChoice) {
     const computerChoice = getRandomChoice();
     playGame(userChoice, computerChoice);
-   // console.log("click");
+    // Testing...
+    // console.log("click");
 }
 
 function playGame(userChoice, computerChoice) {
@@ -68,6 +67,26 @@ function playGame(userChoice, computerChoice) {
         result = ("Alas, " + computerChoice + " defeats " + userChoice + ".  Better luck next time...")
     }
     document.getElementById('result').innerHTML = result;
+    document.getElementById('userScore').innerHTML = userScore;
+    document.getElementById('computerScore').innerHTML = computerScore;
+
+    winnerCheck();
+}
+
+function winnerCheck() {
+    if (computerScore === 5) {
+        userScore=0;
+        computerScore=0;
+        result = "Computer wins the game - try again!"
+    } else if (userScore === 5) {
+        result = "You win the game!  Nice work."
+        userScore=0;
+        computerScore=0;
+    }
+
+    document.getElementById('result').innerHTML = result;
+    document.getElementById('userScore').innerHTML = userScore;
+    document.getElementById('computerScore').innerHTML = computerScore;
 }
 
 
