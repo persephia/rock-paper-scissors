@@ -3,17 +3,21 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Fire, Water, Grass</title>
 </head>
 
 <body>
 <h2>🔥 💧 🌱</h2>
 <p>Can you choose the right element to defeat your virtual opponent?</p>
+<input type="text" id="playerText" placeholder="Choose an element">
+<button id="get-choice">Play</button>
 <div class="button-holder">
     <button id="fireBtn">🔥 Fire ☄️</button>
     <button id="waterBtn">💧 Water 💦</button>
     <button id="grassBtn">🌱 Grass 🌿</button>
+</div>
+<div class="result-holder">
+    <p id="result"></p>
 </div>
 <div class="rules-holder">
     <h4>Rules</h4>
@@ -32,5 +36,5 @@
 
     
 </body>
-
+<script src="script.js"></script>
 </html>
